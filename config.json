@@ -1,0 +1,8 @@
+{
+	"common" : {
+		"mongo_url"	: "mongodb://localhost/opensps_config",
+		"mongo_dbname"	: "opensps_config",
+		"zmq_service_port" : "tcp://127.0.0.10:6666",
+		"zmq_request_port" : "tcp://127.0.0.10:6665"
+	}
+}

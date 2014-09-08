@@ -1,0 +1,6 @@
+[submodule "visu"]
+	path = visu
+	url = https://bitbucket.org/Akigiri/opensps-visu
+[submodule "backend"]
+	path = backend
+	url = https://github.com/knuella/RPi-SPS
