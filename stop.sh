@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-pidfiles="tm.pid cm.pid mb.pid visu.pid"
+pidfiles="tm.pid cm.pid mb.pid output.pid input.pid"
 
 for pidfile in $pidfiles
 do
