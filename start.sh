@@ -4,16 +4,19 @@ then
 	echo "Is the process already startet? if not remove the .pid files manually."
 else
 	path=$PWD
-	cd base/src
+
+	cd $path/base/src
 	python3 message_broker.py&
 	echo $! > $path/mb.pid
 	python3 configuration_manager_mongodb.py cm tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/cm.pid
 	python3 template_manager.py tm tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/tm.pid
-	python3 output.py output tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+
+	cd $path/apps/src
+	python3 datapoint_output/output.py output tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/output.pid
-	python3 input.py input tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	python3 datapoint_input/input.py input tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/input.pid
 	
 	#cd $path/visu
