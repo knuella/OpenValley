@@ -1,5 +1,5 @@
 
-if [ -f mb.pid -o -f cm.pid -o -f tm.pid -o -f visu.pid -o -f digital_output.pid -o -f analog_output.pid -o -f digital_input.pid ]
+if [ -f mb.pid -o -f cm.pid -o -f tm.pid -o -f visu.pid -o -f digital_output.pid -o -f analog_output.pid -o -f digital_input.pid -f 0x20_1.pid -f 0x20_2.pid -f 0x20_3.pid -f 0x20_4.pid -f gpio_7.pid -f gpio_11.pid -f gpio_12.pid -f gpio_13.pid]
 then
 	echo "Is the process already startet? If not remove the *.pid files manually."
 else
