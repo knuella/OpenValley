@@ -24,6 +24,25 @@ else
 	python3 datapoint_input/input_gpio_digital.py digital_input tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/digital_input.pid
 	
+	python2 datapoint_output/output_gnublin_relay.py 0x20_1 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/0x20_1.pid
+	python2 datapoint_output/output_gnublin_relay.py 0x20_2 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/0x20_2.pid
+	python2 datapoint_output/output_gnublin_relay.py 0x20_3 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/0x20_3.pid
+	python2 datapoint_output/output_gnublin_relay.py 0x20_4 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/0x20_4.pid
+	
+	
+	python3 datapoint_input/input_gpio_digital.py gpio_1 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/gpio_1.pid
+	python3 datapoint_input/input_gpio_digital.py gpio_2 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/gpio_2.pid
+	python3 datapoint_input/input_gpio_digital.py gpio_3 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/gpio_3.pid
+	python3 datapoint_input/input_gpio_digital.py gpio_4 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	echo $! > $path/gpio_4.pid
+	
 	#cd $path/visu
 	#node index.js&
 	#echo $! > $path/visu.pid
