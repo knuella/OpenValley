@@ -21,7 +21,7 @@ else
 	echo $! > $path/digital_output.pid
 	python2 datapoint_output/output_gnublin_dac.py analog_output tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/analog_output.pid
-	python3 datapoint_input/input_gpio_digital.py digital_input tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	sudo python3 datapoint_input/input_gpio_digital.py digital_input tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/digital_input.pid
 	
 	python2 datapoint_output/output_gnublin_relay_0x20_1.py 0x20_1 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
@@ -34,13 +34,13 @@ else
 	echo $! > $path/0x20_4.pid
 	
 	
-	python3 datapoint_input/input_gpio_digital_7.py gpio_7 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	sudo python3 datapoint_input/input_gpio_digital_7.py gpio_7 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/gpio_7.pid
-	python3 datapoint_input/input_gpio_digital_11.py gpio_11 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	sudo python3 datapoint_input/input_gpio_digital_11.py gpio_11 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/gpio_11.pid
-	python3 datapoint_input/input_gpio_digital_12.py gpio_12 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	sudo python3 datapoint_input/input_gpio_digital_12.py gpio_12 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/gpio_12.pid
-	python3 datapoint_input/input_gpio_digital_13.py gpio_13 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
+	sudo python3 datapoint_input/input_gpio_digital_13.py gpio_13 tcp://127.0.0.10:6666 tcp://127.0.0.10:6665 tcp://127.0.0.10:5556 tcp://127.0.0.10:5555&
 	echo $! > $path/gpio_13.pid
 	
 	#cd $path/visu
