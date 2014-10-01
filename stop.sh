@@ -4,6 +4,6 @@ pidfiles="mb.pid cm.pid tm.pid visu.pid digital_output.pid analog_output.pid dig
 for pidfile in $pidfiles
 do
 	pid=`tail $pidfile` &&
-	kill $pid &&
+	sudo kill $pid &&
 	rm $pidfile
 done
